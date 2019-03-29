@@ -175,7 +175,7 @@ public class demo3 extends Application {
     public void actualGame(Stage gameStage){
 		 setStartConditions();
 		 Group gamePane = new Group(player1, coins1, enemy1, moneycounter);
-	   Scene gameScene = new Scene(gamePane, 46*20, 85*10);
+	   Scene gameScene = new Scene(gamePane, 46*20, 85*10, Color.GHOSTWHITE);
 
 
 	   //starts moving player, added links to sprites of player facing different directions
