@@ -14,7 +14,7 @@ Run by downloading the entirety of the master branch into one folder and compile
 Demo 2 - Merging an expanded console based version with GUI
 Run by opening the demo2 class app. 
 
-Demo 3 - Creating basic functionality in the console version
+Demo 1 - Creating basic functionality in the console version
 There is no JUnit test for DEMO 1,2&3
 
 
