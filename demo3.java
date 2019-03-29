@@ -23,53 +23,108 @@ import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.scene.input.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class demo3.
+ */
 public class demo3 extends Application {
 
+	/** The atimer. */
 	/*
 	*
 	*
 	*
 	*/
 	public AnimationTimer atimer;
+	
+	/** The dead L. */
 	private Label deadL = new Label("GAMEOVER");
+	
+	/** The moneycounter. */
 	private Label moneycounter = new Label("$: ");
+	
+	/** The counter. */
 	private int counter = 0;
+	
+	/** The move. */
 	private char move;
+	
+	/** The is it over yet. */
 	boolean isItOverYet = false;
 
+    /** The user. */
     //#################################
     private Player user;
+    
+    /** The gamemap. */
     private Gamemap1 gamemap = new Gamemap1();
+		
+		/** The is it valid. */
 		private int isItValid = 0;
     //#################################
-//generating the enemy character
+/** The enemy sprite location. */
+    //generating the enemy character
 		public String enemySpriteLocation = "https://i.gyazo.com/dc7a81caa79fbae63b1f32e103d8bac0.png";
+		
+		/** The enemy sprite. */
 		Image enemySprite = new Image(enemySpriteLocation, 46, 85, false, false);
+		
+		/** The enemy 1. */
 		public Node enemy1 = new ImageView(enemySprite);
+
+/** The bag of coins. */
 //generating the loot character
     public String bagOfCoins = "https://i.gyazo.com/d2b097f96fbcca37008ebfac4bb0c121.png";
+    
+    /** The coins sprite. */
     Image coinsSprite = new Image(bagOfCoins, 46, 85, false, false);
+    
+    /** The coins 1. */
     public Node coins1 = new ImageView(coinsSprite);
 
+    /** The tf. */
     private TextField tf;
 //generating player character
-    //player sprite link and sets it up
+    /** The player sprite location. */
+//player sprite link and sets it up
     public String playerSpriteLocation = "https://i.gyazo.com/12f04f301ecc6634b9bfa58a2b05364a.png";
+    
+    /** The player sprite. */
     Image playerSprite = new Image(playerSpriteLocation);
+		
+		/** The player 1. */
 		public Node player1 = new ImageView(playerSprite);
 
+	/** The which direction. */
 	// direction Direction
 	Direction whichDirection = Direction.NONE;
+	
+	/** The dead stage. */
 	//initializes second gamestage
 	private Stage deadStage = new Stage();
+	
+	/** The game stage. */
 	private Stage gameStage = new Stage();
+    
+    /**
+     * Instantiates a new demo 3.
+     */
     // CONSTRUCTOR
     public demo3() {}
+
+/**
+ * The main method.
+ *
+ * @param args the arguments
+ */
 //Main function
     public static void main(String[] args) {
     	launch(args);
         }
 
+    /* (non-Javadoc)
+     * @see javafx.application.Application#start(javafx.stage.Stage)
+     */
     public void start (Stage stage) {
         BorderPane pane = new BorderPane();
 
@@ -112,7 +167,12 @@ public class demo3 extends Application {
 
     // stage that will have actual game in it, created by b1.setOnAction
 
-   public void actualGame(Stage gameStage){
+   /**
+     * Actual game.
+     *
+     * @param gameStage the game stage
+     */
+    public void actualGame(Stage gameStage){
 		 setStartConditions();
 		 Group gamePane = new Group(player1, coins1, enemy1, moneycounter);
 	   Scene gameScene = new Scene(gamePane, 46*20, 85*10);
@@ -223,7 +283,12 @@ public class demo3 extends Application {
 
    }
 
-	 public void gameOver(Stage deadStage){
+	 /**
+ 	 * Game over.
+ 	 *
+ 	 * @param deadStage the dead stage
+ 	 */
+ 	public void gameOver(Stage deadStage){
        deadL.setStyle("-fx-font-size: 80px;");
        BorderPane gamePane = new BorderPane(deadL);
        Scene gameScene = new Scene(gamePane, 800, 400);
@@ -233,7 +298,11 @@ public class demo3 extends Application {
        deadStage.setScene(gameScene);
        deadStage.show();
    }
-	 //multiple screens maybe, add more obstacles in new stages maybe, settings to fuck with AI
+	 
+ 	/**
+	  * Sets the start conditions.
+	  */
+ 	//multiple screens maybe, add more obstacles in new stages maybe, settings to fuck with AI
 	public void setStartConditions() {
 		player1.relocate(0, 0);
 		gamemap.getPlayer().getLocation().setX(1);
@@ -250,6 +319,12 @@ public class demo3 extends Application {
 	}
 //moves the player by gettings its sizes and adding its dimensions to it by using java
 //if the player moves out of the window the player respawns in a random grid on the gap
+/**
+ * Moving GUI.
+ *
+ * @param speedx the speedx
+ * @param speedy the speedy
+ */
 // method relocate
 	public void movingGUI(int speedx, int speedy){
 		double xcord = player1.getLayoutX() + speedx;

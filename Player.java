@@ -1,20 +1,43 @@
 import java.util.Scanner;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Player.
+ */
 public class Player {
 
 
+	/** The health. */
 	private int health = 100;
+	
+	/** The location. */
 	//private Item items;
 	private Location location;
 
+	/**
+	 * Instantiates a new player.
+	 *
+	 * @param loc the loc
+	 */
 	public Player(Location loc) {
 		location = new Location(loc.getX(), loc.getY());
 	}
 
+	/**
+	 * Gets the location.
+	 *
+	 * @return the location
+	 */
 	public Location getLocation(){
 		return location;
 	}
+	
+	/**
+	 * Sets the loc.
+	 *
+	 * @param loc the new loc
+	 */
 	public void setLoc(Location loc){
 		location = loc;
 	}
@@ -43,7 +66,13 @@ public class Player {
 		}
 	}*/
 
-	public AttackType getMove(Enemy enemy) {
+	/**
+ * Gets the move.
+ *
+ * @param enemy the enemy
+ * @return the move
+ */
+public AttackType getMove(Enemy enemy) {
 		return AttackType.KICK;
 	}
 

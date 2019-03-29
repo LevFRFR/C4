@@ -1,3 +1,11 @@
+// TODO: Auto-generated Javadoc
+/**
+ * The Enum AttackType.
+ */
 enum AttackType {
-	PUNCH, KICK;
+	
+	/** The punch. */
+	PUNCH, 
+ /** The kick. */
+ KICK;
 }

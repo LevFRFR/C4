@@ -1,5 +1,15 @@
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Enum Item.
+ */
 enum Item {
-	POISON, POTION, COINS;
+	
+	/** The poison. */
+	POISON, 
+ /** The potion. */
+ POTION, 
+ /** The coins. */
+ COINS;
 }
