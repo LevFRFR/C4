@@ -25,7 +25,11 @@ import javafx.scene.input.*;
 
 public class demo3 extends Application {
 
-	//initializes player speed
+	/*
+	*
+	*
+	*
+	*/
 	public AnimationTimer atimer;
 	private Label deadL = new Label("GAMEOVER");
 	private Label moneycounter = new Label("$: ");
@@ -38,17 +42,17 @@ public class demo3 extends Application {
     private Gamemap1 gamemap = new Gamemap1();
 		private int isItValid = 0;
     //#################################
-
+//generating the enemy character
 		public String enemySpriteLocation = "https://i.gyazo.com/dc7a81caa79fbae63b1f32e103d8bac0.png";
 		Image enemySprite = new Image(enemySpriteLocation, 46, 85, false, false);
 		public Node enemy1 = new ImageView(enemySprite);
-
+//generating the loot character
     public String bagOfCoins = "https://i.gyazo.com/d2b097f96fbcca37008ebfac4bb0c121.png";
     Image coinsSprite = new Image(bagOfCoins, 46, 85, false, false);
     public Node coins1 = new ImageView(coinsSprite);
 
     private TextField tf;
-
+//generating player character
     //player sprite link and sets it up
     public String playerSpriteLocation = "https://i.gyazo.com/12f04f301ecc6634b9bfa58a2b05364a.png";
     Image playerSprite = new Image(playerSpriteLocation);
@@ -59,9 +63,9 @@ public class demo3 extends Application {
 	//initializes second gamestage
 	private Stage deadStage = new Stage();
 	private Stage gameStage = new Stage();
-    // CONSTRUCTORS
+    // CONSTRUCTOR
     public demo3() {}
-
+//Main function
     public static void main(String[] args) {
     	launch(args);
         }
@@ -100,7 +104,7 @@ public class demo3 extends Application {
 				});
 
 
-        Scene scene = new Scene(pane, 400, 200);
+        Scene scene = new Scene(pane, 500, 200);
         stage.setTitle("Demo 3");
         stage.setScene(scene);
         stage.show();
