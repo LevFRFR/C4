@@ -9,7 +9,7 @@ Citation for images used are embedded in the code:
 Group 28 T07 Adventure Game Project Link to Repo: https://github.com/LevFRFR/C4 Lev, Hassan, Peter, Samir & Andrew Demo 2 GUI adaptation
 
 Demo 3 - A  significantly improved GUI experience.
-Run by downloading the entirety of the master branch into one folder and compile and run demo3.
+Run by downloading the entirety of the master branch into one folder and compile and run demo3. HTML Javadoc in JavaDoc folder
 
 Demo 2 - Merging an expanded console based version with GUI
 Run by opening the demo2 class app. 
