@@ -252,7 +252,7 @@ public class demo3 extends Application {
 								setStartConditions();
 						 		gameStage.close();
 								gameOver(deadStage);
-								System.out.println("Awww you got caught, try again next time.");
+								//System.out.println("Awww you got caught, try again next time.");
 							}
 
 							int isItValid = gamemap.isValid(gamemap.getPlayer().getLocation(), whichDirection, true);
