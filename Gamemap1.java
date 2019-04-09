@@ -1,25 +1,14 @@
-import java.util.Random;
-// TODO: Auto-generated Javadoc
-
-/**
- * The Class Gamemap1.
- */
+import java.util.*;
 public class Gamemap1{
 //game map
-/** The user. */
 //private instance variables
 private Player user;
-
-/** The enemy. */
 private Enemy enemy;
-
-/** The player loc. */
-private Location playerLoc = new Location(2, 2);
+private Location playerLoc = new Location(1, 1);
 
 //private int xcoord; //not less than 0 or bigger than 1280 +/- width of avatar
 //private int ycoord; //not less than not bigger than 720 +/- height of the avatar
 
-/** The map. */
 private static char[][] map = new char[][] {
     {'X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X'},
     {'X',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','X'},
@@ -35,44 +24,22 @@ private static char[][] map = new char[][] {
     {'X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X'}
 };
 
-/**
- * Instantiates a new gamemap 1.
- */
 public Gamemap1(){
 //creating intances of 2 objects, Player and Enemy
     user = new Player(playerLoc);
-    enemy = new Enemy(10, 20);
+    enemy = new Enemy(20, 10);
 
 //Spawning P at the location of player & E at the location of the enemy
     map[playerLoc.getY()][playerLoc.getX()] = 'P';
-    map[enemy.getLocation().getX()][enemy.getLocation().getY()] = 'E';
+    map[enemy.getLocation().getY()][enemy.getLocation().getX()] = 'E';
 
 }
-
-/**
- * Gets the player.
- *
- * @return the player
- */
 public Player getPlayer() {
 	return user;
 }
-
-/**
- * Gets the enemy.
- *
- * @return the enemy
- */
 public Enemy getEnemy() {
 	return enemy;
 }
-
-/**
- * Sets the loot location.
- *
- * @param x the x
- * @param y the y
- */
 //Spawns the loot
 public void setLootLocation(int x, int y) {
 	for (int row=0; row < map.length; row++) {
@@ -82,16 +49,15 @@ public void setLootLocation(int x, int y) {
 			}
     }
 	}
+
 	map[y][x] = '$';
 }
 
-/**
- * Sets the enemy location.
- *
- * @param x the x
- * @param y the y
- */
+
+
 public void setEnemyLocation(int x, int y) {
+	enemy.getLocation().setX(x);
+	enemy.getLocation().setY(y);
 	for (int row=0; row < map.length; row++) {
 		for(int col=0; col< map[row].length; col++) {
 			if (map[row][col] == 'E') {
@@ -102,13 +68,9 @@ public void setEnemyLocation(int x, int y) {
 	map[y][x] = 'E';
 }
 
-/**
- * Sets the player location.
- *
- * @param x the x
- * @param y the y
- */
 public void setPlayerLocation(int x, int y) {
+	user.getLocation().setX(x);
+	user.getLocation().setY(y);
 	for (int row=0; row < map.length; row++) {
 		for(int col=0; col< map[row].length; col++) {
 			if (map[row][col] == 'P') {
@@ -118,36 +80,29 @@ public void setPlayerLocation(int x, int y) {
 	}
 	map[y][x] = 'P';
 }
-//CONSOLE BASED CONTROLS RENDERED OBSOLETE
-//public void moving(Direction x, Location loc){
-//	// sets start position
-//	// replaces last spot with an empty spot
-//	// sets new player spot too
-//	char temp = map[loc.getY()][loc.getX()];
-//	map[loc.getY()][loc.getX()] = ' ';
-//
-//
-//	if (x == Direction.LEFT){
-//		loc.setX(loc.getX()-1);
-//	}
-//	else if( x == Direction.DOWN){
-//		loc.setY(loc.getY()+1);
-//	}
-//	else if (x == Direction.RIGHT){
-//		loc.setX(loc.getX()+1);
-//	}
-//	else if( x == Direction.UP){
-//		loc.setY(loc.getY()-1);
-//	}
-//	map[loc.getY()][loc.getX()] = temp;
-//}
 
-/**
- * Moving.
- *
- * @param i the i
- * @param whoMoves the who moves
- */
+
+public void stop() {
+	for (int row=0; row < map.length; row++) {
+		for(int col=0; col< map[row].length; col++) {
+			if (map[row][col] == 'P' || map[row][col] == 'E') {
+				map[row][col] = ' ';
+			}
+    }
+	}
+}
+
+public void drawMap() {
+	for (int row=0; row<  map.length; row++)
+	{
+			for(int col=0; col< map[row].length; col++){
+					System.out.print(map[row][col] + "  ");
+			}
+			System.out.println();
+	}
+	System.out.println();
+}
+
 public void moving(Direction i, boolean whoMoves) {
 	if (whoMoves) {
 		int x = user.getLocation().getX();
@@ -190,30 +145,16 @@ public void moving(Direction i, boolean whoMoves) {
 				x++;
 	      enemy.getLocation().setX(x);
 	  }
+
 		setEnemyLocation(x, y);
 
-		/*for (int row=0; row<  map.length; row++)
-    {
-        for(int col=0; col< map[row].length; col++){
-            System.out.print(map[row][col] + "  ");
-        }
-        System.out.println();
-    }
-    System.out.println();*/
+
 }
 }
 
 
 
 
-/**
- * Checks if is valid.
- *
- * @param loc the loc
- * @param x the x
- * @param whoMoves the who moves
- * @return the int
- */
 public int isValid(Location loc, Direction x, boolean whoMoves){
     /*
      * checks if the direction inputed has a wall, or an object, if it does, returns 0
