@@ -239,8 +239,10 @@ public class Demo3 extends Application {
 		Random randomObj = new Random();
 		int randomX = randomObj.nextInt(20);
 		int randomY = randomObj.nextInt(10);
-		coins1.relocate(randomX*46, randomY*85);
-		gamemap.setLootLocation(randomX + 1, randomY + 1);
+		//coins1.relocate(randomX*46, randomY*85);
+		//gamemap.setLootLocation(randomX + 1, randomY + 1);
+		coins1.relocate(10*46,5*85);
+		gamemap.setLootLocation(11, 6);
 	}
 
 }

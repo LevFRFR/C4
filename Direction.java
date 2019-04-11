@@ -1,17 +1,5 @@
-// TODO: Auto-generated Javadoc
-/**
- * The Enum Direction.
- */
+import java.util.*;
+
 enum Direction {
-	
-	/** The up. */
-	UP, 
- /** The down. */
- DOWN, 
- /** The left. */
- LEFT, 
- /** The right. */
- RIGHT, 
- /** The none. */
- NONE;
+	UP, DOWN, LEFT, RIGHT, NONE;
 }
