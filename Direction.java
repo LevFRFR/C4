@@ -1,8 +1,9 @@
+package GameEngine;
 // TODO: Auto-generated Javadoc
 /**
  * The Enum Direction.
  */
-enum Direction {
+public enum Direction {
 	
 	/** The up. */
 	UP, 

@@ -1,4 +1,6 @@
+package Characters;
 import java.util.Scanner;
+import Movement.Location;
 
 
 // TODO: Auto-generated Javadoc

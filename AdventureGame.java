@@ -1,3 +1,4 @@
+package GameEngine;
  import java.util.*;
 import javafx.application.Application;
 
@@ -18,7 +19,7 @@ public class AdventureGame {
 				if (version == 0) {
 					bool = false;
 					System.out.println("Have Fun!");
-					javafx.application.Application.launch(Demo3.class);
+					javafx.application.Application.launch(demo3.class);
 				} else if (version == 1) {
 					bool = false;
 					TextApp ta = new TextApp();

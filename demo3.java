@@ -1,3 +1,8 @@
+package GameEngine;
+import Movement.Location;
+import Characters.Enemy;
+import Characters.Player;
+
 import javafx.application.Application;
 
 import java.util.Random;

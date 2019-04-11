@@ -1,3 +1,4 @@
+package Characters;
 // TODO: Auto-generated Javadoc
 /**
  * The Enum AttackType.

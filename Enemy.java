@@ -1,3 +1,6 @@
+package Characters;
+import Movement.Location;
+import GameEngine.Direction;
  // TODO: Auto-generated Javadoc
 /**
   * The Class Enemy.

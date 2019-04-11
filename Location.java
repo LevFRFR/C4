@@ -1,3 +1,4 @@
+package Movement;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Location.

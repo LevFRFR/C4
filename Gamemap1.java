@@ -1,4 +1,9 @@
+package GameEngine;
 import java.util.*;
+import Movement.Location;
+import Characters.Enemy;
+import Characters.Player;
+
 public class Gamemap1{
 //game map
 //private instance variables

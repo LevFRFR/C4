@@ -1,10 +1,11 @@
+package Characters;
 
 
 // TODO: Auto-generated Javadoc
 /**
  * The Enum Item.
  */
-enum Item {
+public enum Item {
 	
 	/** The poison. */
 	POISON, 

@@ -1,4 +1,9 @@
+package GameEngine;
 import java.util.*;
+import Movement.Location;
+import Characters.Enemy;
+import Characters.Player;
+
 
 public class TextApp {
 
