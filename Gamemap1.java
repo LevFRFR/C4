@@ -25,7 +25,7 @@ private static char[][] map = new char[][] {
 };
 
 public Gamemap1(){
-//creating intances of 2 objects, Player and Enemy
+//creating instances of 2 objects, Player and Enemy
     user = new Player(playerLoc);
     enemy = new Enemy(20, 10);
 
@@ -34,12 +34,19 @@ public Gamemap1(){
     map[enemy.getLocation().getY()][enemy.getLocation().getX()] = 'E';
 
 }
+
+
 public Player getPlayer() {
 	return user;
 }
 public Enemy getEnemy() {
 	return enemy;
 }
+public char[][] getMap(){
+	return map;
+}
+
+
 //Spawns the loot
 public void setLootLocation(int x, int y) {
 	for (int row=0; row < map.length; row++) {
