@@ -1,36 +1,41 @@
 import java.util.*;
 
- public class Enemy {
+ public class Enemy extends Location{
 
 	private Location enemyLoc;
 	private Player user;
 	private int health = 100;
 
 	public Enemy(int x, int y) {
-		enemyLoc = new Location(x, y);
+		super(x, y);
 	}
 
-	public Location getLocation() {
-		return enemyLoc;
+	@Override
+	public int getX(){
+			return super.getX();
+	}
+
+	@Override
+	public int getY(){
+			return super.getY();
 	}
 
 	public Direction getMove(Player user) {
-		Location playerLoc = user.getLocation();
-		int playerX = playerLoc.getX();
-		int playerY = playerLoc.getY();
-		if (playerX > enemyLoc.getX()) {
-			if (playerY < enemyLoc.getY()) {
+		int playerX = user.getX();
+		int playerY = user.getY();
+		if (playerX > getX()) {
+			if (playerY < getY()) {
 				return Direction.UP;
 			} else {
 				return Direction.RIGHT;
 			}
-		} else if (playerX < enemyLoc.getX()){
-			if (playerY < enemyLoc.getY()) {
+		} else if (playerX < getX()){
+			if (playerY < getY()) {
 				return Direction.UP;
 			} else {
 				return Direction.LEFT;
 			}
-		} else if (playerY > enemyLoc.getY()) {
+		} else if (playerY > getY()) {
 			return Direction.DOWN;
 		} else {
 			return Direction.NONE;

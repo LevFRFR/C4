@@ -6,8 +6,10 @@ public class Location {
 	private int ycoord;
 
 	public Location(int x, int y) {
-		xcoord = x;
-		ycoord = y;
+        setX(x);
+        setY(y);
+        // xcoord = x;
+		// ycoord = y;
 	}
 
 	public int getX() {
@@ -28,5 +30,14 @@ public class Location {
 			ycoord = y;
 		}
 	}
+
+    /*public Location getLocation(){
+        return ;
+    } */
+
+    public String toString(){
+        String str = "(X: " + this.getX() + ", Y: " + this.getY() + ")";
+				return str;
+    }
 
 }
