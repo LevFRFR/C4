@@ -10,7 +10,7 @@ Citation for images used are embedded in the code:
 Group 28 T07 Adventure Game Project Link to Repo: https://github.com/LevFRFR/C4 Lev, Hassan, Peter, Samir & Andrew Demo 2 GUI adaptation
 
 Final — OO programming used, JUnit tests made for Gamemap1, console logic based, inheritance deployed, packages used and JavaDoc documented. Run by taking all classes (TextApp, Player, Location, Gamemap1, Enemy, Direction, & Demo3) into one folder and run AdventureGame.java class.
-For Junit test import all classes into one folder, import Junit 4 and GameEngineTest.java Class. Run GameEngineTest
+For Junit test import all classes into one folder, import Junit 4 and GameEngineTest.java Class. Compile & Run GameEngineTest
 
 Note* In order to keep the difficulty moderate, we restricted repeat access to the lower portal.
 
