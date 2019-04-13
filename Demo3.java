@@ -23,74 +23,169 @@ import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.scene.input.*;
 
+/**
+ * The Class Demo3.
+ */
 public class Demo3 extends Application {
 
+	/** The atimer. */
 	//initializes player speed
 	public AnimationTimer atimer;
+	
+	/** The dead L. */
 	private Label deadL = new Label("GAMEOVER");
+	
+	/** The moneycounter. */
 	public Label moneycounter = new Label("$: ");
+	
+	/** The counter. */
 	public int counter = 0;
+	
+	/** The move. */
 	private char move;
+	
+	/** The is it over yet. */
 	boolean isItOverYet = false;
 
+    /** The user. */
     //#################################
     private Player user;
+    
+    /** The gamemap. */
     private Gamemap1 gamemap = new Gamemap1();
+	
+	/** The is it valid. */
 	private int isItValid = 0;
     //#################################
 
-	public String enemySpriteLocation = "https://i.gyazo.com/dc7a81caa79fbae63b1f32e103d8bac0.png";
+	/** The enemy sprite location. */
+    public String enemySpriteLocation = "https://i.gyazo.com/dc7a81caa79fbae63b1f32e103d8bac0.png";
+	
+	/** The enemy sprite. */
 	Image enemySprite = new Image(enemySpriteLocation, 46, 85, false, false);
+	
+	/** The enemy 1. */
 	public Node enemy1 = new ImageView(enemySprite);
 
+    /** The bag of coins. */
     public String bagOfCoins = "https://i.gyazo.com/d2b097f96fbcca37008ebfac4bb0c121.png";
+    
+    /** The coins sprite. */
     Image coinsSprite = new Image(bagOfCoins, 46, 85, false, false);
+    
+    /** The coins 1. */
     public Node coins1 = new ImageView(coinsSprite);
 
+    /** The spikes location. */
     public String spikesLocation = "https://i.gyazo.com/5737db78ae297dc53c74f34b83c1ea98.png";
+    
+    /** The spikes sprite. */
     Image spikesSprite = new Image(spikesLocation, 46, 43, false, false);
+    
+    /** The spikes 1. */
     public Node spikes1 = new ImageView(spikesSprite);
+    
+    /** The spikes 2. */
     public Node spikes2 = new ImageView(spikesSprite);
+    
+    /** The spikes 3. */
     public Node spikes3 = new ImageView(spikesSprite);
+    
+    /** The spikes 4. */
     public Node spikes4 = new ImageView(spikesSprite);
+    
+    /** The spikes 5. */
     public Node spikes5 = new ImageView(spikesSprite);
+    
+    /** The spikes 6. */
     public Node spikes6 = new ImageView(spikesSprite);
+    
+    /** The spikes 7. */
     public Node spikes7 = new ImageView(spikesSprite);
+    
+    /** The spikes 8. */
     public Node spikes8 = new ImageView(spikesSprite);
+    
+    /** The spikes 9. */
     public Node spikes9 = new ImageView(spikesSprite);
+    
+    /** The spikes 10. */
     public Node spikes10 = new ImageView(spikesSprite);
+    
+    /** The spikes 11. */
     public Node spikes11 = new ImageView(spikesSprite);
+    
+    /** The spikes 12. */
     public Node spikes12 = new ImageView(spikesSprite);
+    
+    /** The spikes 13. */
     public Node spikes13 = new ImageView(spikesSprite);
+    
+    /** The spikes 14. */
     public Node spikes14 = new ImageView(spikesSprite);
+    
+    /** The spikes 15. */
     public Node spikes15 = new ImageView(spikesSprite);
+    
+    /** The spikes 16. */
     public Node spikes16 = new ImageView(spikesSprite);
+    
+    /** The spikes 17. */
     public Node spikes17 = new ImageView(spikesSprite);
+    
+    /** The spikes 18. */
     public Node spikes18 = new ImageView(spikesSprite);
 
 
 
+    /** The portal location. */
     public String portalLocation = "https://i.gyazo.com/a1814a2bd337c5965d6b8db26f2c6c27.png";
+    
+    /** The portal sprite. */
     Image portalSprite = new Image(portalLocation, 46, 85, false, false);
+    
+    /** The portal 1. */
     public Node portal1 = new ImageView(portalSprite);
+    
+    /** The portal 2. */
     public Node portal2 = new ImageView(portalSprite);
 
+    /** The tf. */
     private TextField tf;
 
+    /** The player sprite location. */
     //player sprite link and sets it up
     public String playerSpriteLocation = "https://i.gyazo.com/12f04f301ecc6634b9bfa58a2b05364a.png";
+    
+    /** The player sprite. */
     Image playerSprite = new Image(playerSpriteLocation);
+	
+	/** The player 1. */
 	public Node player1 = new ImageView(playerSprite);
 
+	/** The which direction. */
 	// direction Direction
 	Direction whichDirection = Direction.NONE;
+	
+	/** The dead stage. */
 	//initializes second gamestage
 	private Stage deadStage = new Stage();
+	
+	/** The game stage. */
 	private Stage gameStage = new Stage();
+	
+	/** The game stage 2. */
 	private Stage gameStage2 = new Stage();
+    
+    /**
+     * Instantiates a new demo 3.
+     */
     // CONSTRUCTORS
     public Demo3() {}
 
+    /* (non-Javadoc)
+     * @see javafx.application.Application#start(javafx.stage.Stage)
+     */
     public void start (Stage stage) {
         BorderPane pane = new BorderPane();
 
@@ -133,7 +228,12 @@ public class Demo3 extends Application {
 
     // stage that will have actual game in it, created by b1.setOnAction
 
-		public void actualGame(Stage gameStage){
+		/**
+     * Actual game.
+     *
+     * @param gameStage the game stage
+     */
+    public void actualGame(Stage gameStage){
 		setStartConditions();
 		Group gamePane = new Group(player1, coins1, enemy1, moneycounter, portal1, portal2);
 		Scene gameScene = new Scene(gamePane, 46*20, 85*10);
@@ -262,6 +362,11 @@ public class Demo3 extends Application {
 
 		}
 
+   /**
+    * Actual game 2.
+    *
+    * @param gameStage2 the game stage 2
+    */
    public void actualGame2(Stage gameStage2){
 		setStartConditions();
 		Group gamePane = new Group(player1, coins1, enemy1, moneycounter, portal1, portal2, spikes1,spikes2,spikes3,spikes4,spikes5,spikes6,spikes7,spikes8,spikes9,spikes10,spikes11,spikes12,spikes13,spikes14,spikes15,spikes16,spikes17);
@@ -380,7 +485,12 @@ public class Demo3 extends Application {
    }
 
 
-	 public void gameOver(Stage deadStage){
+	 /**
+ 	 * Game over.
+ 	 *
+ 	 * @param deadStage the dead stage
+ 	 */
+ 	public void gameOver(Stage deadStage){
        deadL.setStyle("-fx-font-size: 80px;");
        BorderPane gamePane = new BorderPane(deadL);
        Scene gameScene = new Scene(gamePane, 800, 400);
@@ -390,7 +500,11 @@ public class Demo3 extends Application {
        deadStage.setScene(gameScene);
        deadStage.show();
    }
-	 //multiple screens maybe, add more obstacles in new stages maybe, settings to mess with AI
+	 
+ 	/**
+ 	 * Sets the start conditions.
+ 	 */
+ 	//multiple screens maybe, add more obstacles in new stages maybe, settings to mess with AI
 	public void setStartConditions() {
 		player1.relocate(0, 0);
 		gamemap.setPlayerLocation(1, 1);

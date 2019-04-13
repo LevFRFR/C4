@@ -1,45 +1,50 @@
 import java.util.*;
 
-//HERE IS SOME NICE BS FOR INHERTINCANE SEE IF IT RUNS
-//LEV IS HIGH AND FUCKED UP LACTION CLASS WITH HIS TO STRING METHOD
+
+/**
+ * The Class Player.
+ */
 public class Player extends Location{
 
 
+	/** The health. */
 	private int health = 100;
-	//private Item items;
 
-	// private Location location;
+	/** The move. */
 	private char move = 'k';
 
-	public Player(int X, int Y) {//Location loc
-		// location = new Location(loc.getX(), loc.getY());
+	/**
+	 * Instantiates a new player.
+	 *
+	 * @param X the x
+	 * @param Y the y
+	 */
+	public Player(int X, int Y) {
+
         super(X, Y);
 	}
 
+    /* 
+     * @see Location#getX()
+     */
     @Override
     public int getX(){
         return super.getX();
     }
 
+    /* 
+     * @see Location#getY()
+     */
     @Override
     public int getY(){
         return super.getY();
     }
 
-
-
-
-	// public Location getLocation(){
-	// 	return location;
-	// }
-    // public Location getLocation(){
-    //     return location;
-    // }
-
-	// public void setLoc(Location loc){
-	// 	location = loc;
-	// }
-
+	/**
+	 * Gets the direction.
+	 *
+	 * @return the direction
+	 */
 	public Direction getDirection() {
 
 		//scanner takes in user input which can be assigned to variables
@@ -61,12 +66,6 @@ public class Player extends Location{
 			return Direction.NONE;
 		}
 	}
-
-	/*public AttackType getMove(Enemy enemy) {
-		return AttackType.KICK;
-	}*/
-
-
 
 
 

@@ -1,5 +1,18 @@
 import java.util.*;
 
+/**
+ * The Enum Direction.
+ */
 enum Direction {
-	UP, DOWN, LEFT, RIGHT, NONE;
+	
+	/** The up. */
+	UP, 
+ /** The down. */
+ DOWN, 
+ /** The left. */
+ LEFT, 
+ /** The right. */
+ RIGHT, 
+ /** The none. */
+ NONE;
 }

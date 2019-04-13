@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 
+/**
+ * The Class GameEngineTest.
+ */
 public class GameEngineTest {
 
+/**
+ * Test setting player location.
+ */
 @Test
 public void testSettingPlayerLocation(){
 	Gamemap1 test = new Gamemap1();
@@ -40,6 +46,9 @@ public void testSettingPlayerLocation(){
 
 }
 
+/**
+ * Test valid move.
+ */
 @Test
 public void testValidMove() {
 	Gamemap1 test1 = new Gamemap1();
@@ -64,6 +73,10 @@ public void testValidMove() {
 	assertEquals("The game should've registered you hitting the wall at 0,4", test1.isEnemyValid(enem2, Direction.LEFT), 0);
 
 }
+
+/**
+ * Test setting enemy location.
+ */
 @Test
 public void testSettingEnemyLocation() {
 	Gamemap1 test1 = new Gamemap1();
@@ -74,6 +87,10 @@ public void testSettingEnemyLocation() {
 	assertEquals("Enemy Must be at X value 1", test1.getEnemy().getX(), enemy1.getX());
 	assertEquals("Enemy Must be at Y value 2", test1.getEnemy().getY(), enemy1.getY());
 }
+
+/**
+ * Test setting loot location.
+ */
 @Test
 public void testSettingLootLocation() {
 	Gamemap1 test1 = new Gamemap1();
@@ -86,6 +103,10 @@ public void testSettingLootLocation() {
 	assertEquals("Loot must be at location (9,6)", lootTest, "$");
 
 }
+
+/**
+ * Test player moving.
+ */
 @Test
 public void testPlayerMoving() {
 	Gamemap1 test1 = new Gamemap1();
@@ -112,6 +133,10 @@ public void testPlayerMoving() {
 	assertEquals("Player Must be at X value 6", test2.getPlayer().getX(), player2.getX());
 
 }
+
+/**
+ * Test enemy moving.
+ */
 @Test
 public void testEnemyMoving() {
 	Gamemap1 test1 = new Gamemap1();
@@ -131,6 +156,9 @@ public void testEnemyMoving() {
 
 }
 
+/**
+ * Test map maker.
+ */
 @Test
 public void testMapMaker() {
 	Gamemap1 test1 = new Gamemap1();
@@ -152,18 +180,5 @@ public void testMapMaker() {
 	assertEquals("The map does not get initialized properly", map2, map1);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

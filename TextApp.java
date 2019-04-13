@@ -1,16 +1,33 @@
 import java.util.*;
 
+/**
+ * The Class TextApp.
+ */
 public class TextApp {
 
+	/** The player direction. */
 	private Direction playerDirection = Direction.NONE;
+	
+	/** The player location. */
 	private Location playerLocation;
+	
+	/** The user. */
 	private Player user;
+	
+	/** The counter. */
 	private int counter = 0;
+	
+	/** The is it valid. */
 	private int isItValid = 0;
+	
+	/** The gamemap. */
 	private Gamemap1 gamemap;
 
 
 
+	/**
+	 * Playgame.
+	 */
 	public void playgame(){
 		System.out.println("Recover the treasure! But watch out for the sneaky goblin! ");
 		gamemap = new Gamemap1();
@@ -83,10 +100,18 @@ public class TextApp {
 		}
 	}
 
+	/**
+	 * Gets the gamemap.
+	 *
+	 * @return the gamemap
+	 */
 	public Gamemap1 getGamemap() {
 		return gamemap;
 	}
 
+	/**
+	 * Sets the start conditions.
+	 */
 	public void setStartConditions() {
 		playerDirection = Direction.NONE;
 		gamemap.setPlayerLocation(1, 1);
@@ -101,11 +126,6 @@ public class TextApp {
 		gamemap.setLootLocation(randomX + 1, randomY + 1);
 		//gamemap.setLootLocation(11, 6);
 	}
-
-
-
-
-
 
 
 }

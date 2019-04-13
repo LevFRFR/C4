@@ -1,8 +1,16 @@
  import java.util.*;
 import javafx.application.Application;
 
+/**
+ * The Class AdventureGame.
+ */
 public class AdventureGame {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args){
 		int version;
 		Scanner scanner = new Scanner(System.in);
