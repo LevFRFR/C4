@@ -1,4 +1,7 @@
+package GameEngine;
 import java.util.*;
+
+import Movement.Location;
 
 /**
   * The Class Enemy.

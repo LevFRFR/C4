@@ -1,3 +1,4 @@
+package GameEngine;
 import javafx.application.Application;
 
 import java.util.*;
@@ -22,6 +23,7 @@ import javafx.scene.shape.*;
 import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.scene.input.*;
+import Movement.Location;
 
 /**
  * The Class Demo3.

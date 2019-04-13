@@ -1,8 +1,14 @@
+package GameEngine;
 
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import org.junit.Test;
 
+
+
+import GameEngine.Gamemap1;
+import GameEngine.Player;
+import GameEngine.Enemy;
 
 /**
  * The Class GameEngineTest.

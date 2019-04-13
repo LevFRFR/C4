@@ -1,9 +1,14 @@
+package GameStarter;
  import java.util.*;
-import javafx.application.Application;
 
+
+import javafx.application.Application;
 /**
  * The Class AdventureGame.
  */
+
+import GameEngine.TextApp;
+import GameEngine.Demo3;
 public class AdventureGame {
 
 	/**
