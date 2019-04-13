@@ -62,6 +62,7 @@ public class Demo3 extends Application {
     public String enemySpriteLocation = "https://i.gyazo.com/dc7a81caa79fbae63b1f32e103d8bac0.png";
 	
 	/** The enemy sprite. */
+	//CITATION: https://www.kisspng.com/png-green-goblin-sprite-clip-art-1634568/
 	Image enemySprite = new Image(enemySpriteLocation, 46, 85, false, false);
 	
 	/** The enemy 1. */
@@ -139,6 +140,7 @@ public class Demo3 extends Application {
 
 
     /** The portal location. */
+	//CITATION: https://www.kisspng.com/png-portal-video-game-film-column-sprite-5506003/
     public String portalLocation = "https://i.gyazo.com/a1814a2bd337c5965d6b8db26f2c6c27.png";
     
     /** The portal sprite. */
